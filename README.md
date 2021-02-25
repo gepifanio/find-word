@@ -1,28 +1,30 @@
-# find-word
+## [Find Word Project Preview](https://find-word.vercel.app/)
 
-## Project setup
-```
+
+## Getting started
+
+```bash
+# 1. Clone the repository.
+git clone git@github.com:gepifanio/find-word.git
+
+# 2. Enter your newly-cloned folder.
+cd find-word
+
+# 3. Install dependencies. Make sure yarn is installed: https://yarnpkg.com/lang/en/docs/install
 yarn install
-```
 
-### Compiles and hot-reloads for development
-```
+# 4. Compiles and hot-reloads for development
 yarn serve
-```
 
-### Compiles and minifies for production
-```
+# 5. Compiles and minifies for production
 yarn build
-```
 
-### Run your unit tests
-```
+# 6. Run your unit tests
 yarn test:unit
-```
 
-### Lints and fixes files
-```
+# 7. Lint project files
 yarn lint
+
 ```
 
 ## Overview
