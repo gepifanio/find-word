@@ -1,28 +1,58 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <h1>Find word App</h1>
+    <div>
+      <label for="userInputWord">Type some letters: </label>
+      <input
+        type="text"
+        id="userInputWord"
+        @keydown.enter="findWord"
+        v-model="inputContent"
+      />
+    </div>
+    <div>
+      <button @click="findWord">Submit</button>
+      <button @click="clearButton">Clear</button>
+    </div>
+    <ResultsCount :count="resultsFound.length"></ResultsCount>
+    <ResultsList :data="resultsFound"></ResultsList>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import ResultsCount from './components/ResultsCount';
+import ResultsList from './components/ResultsList';
+import findWord from './helpers/findWord.js';
+import words from './static/wordList.txt';
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
-    HelloWorld
+    ResultsCount,
+    ResultsList
+  },
+  data() {
+    return {
+      inputContent: '',
+      resultsFound: ''
+    };
+  },
+  methods: {
+    findWord() {
+      let wordsArray = words.split('\n');
+      this.resultsFound = findWord(wordsArray, this.inputContent);
+    },
+    clearButton() {
+      this.inputContent = '';
+      this.findWord();
+    }
   }
 };
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
   margin-top: 60px;
 }
 </style>

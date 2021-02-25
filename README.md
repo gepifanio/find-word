@@ -25,5 +25,10 @@ yarn test:unit
 yarn lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Overview
+
+The application should present a single text input box and a submit button. The user is expected to enter some letters into the input box, for example “dgo”.
+
+When the button is pressed, the page updates to show a list of English words that can be made using those letters. For example, “dog”, “god”.
+
+Here is a [list of english words](./src/static/wordList.txt)

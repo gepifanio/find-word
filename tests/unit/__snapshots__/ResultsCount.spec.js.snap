@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResultsCount.vue should match snapshot 1`] = `
+<p
+  data-test="results-count"
+>
+  2 results
+</p>
+`;
