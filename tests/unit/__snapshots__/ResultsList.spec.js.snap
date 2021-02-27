@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResultsList.vue should match snapshot 1`] = `
+<div
+  class="bg-white shadow-xl rounded-lg w-1/2"
+>
+  <ul
+    class="divide-y divide-gray-300"
+  >
+    <li
+      class="p-4 hover:bg-gray-50"
+      data-test="result-data-item"
+    >
+      dog
+    </li>
+  </ul>
+  <ul
+    class="divide-y divide-gray-300"
+  >
+    <li
+      class="p-4 hover:bg-gray-50"
+      data-test="result-data-item"
+    >
+      god
+    </li>
+  </ul>
+</div>
+`;
