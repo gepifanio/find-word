@@ -1,7 +1,21 @@
-## [Find Word Project Preview](https://find-word.vercel.app/)
+## Find Word Project [Preview Link](https://find-word.vercel.app/)
 
 
 ## Getting started
+
+#### Using [Docker](https://docs.docker.com/) Container:
+```bash
+# 1. Clone the repository.
+git clone git@github.com:gepifanio/find-word.git
+
+# 2. Enter your newly-cloned folder.
+cd find-word
+
+# 3. Make sure docker is installed: https://docs.docker.com/get-docker/
+docker-compose up
+```
+
+#### Using your local machine:
 
 ```bash
 # 1. Clone the repository.
