@@ -13,7 +13,9 @@
       />
     </div>
     <div class="mb-5">
-      <button class="btn mr-1" @click="findWord">Submit</button>
+      <button :class="buttonAnimation" class="btn mr-1" @click="findWord">
+        Submit
+      </button>
       <button class="btn" @click="clearButton">Clear</button>
     </div>
     <ResultsCount class="mb-5" :count="resultsFound.length"></ResultsCount>
@@ -38,6 +40,15 @@ export default {
       inputContent: '',
       resultsFound: ''
     };
+  },
+  computed: {
+    buttonAnimation() {
+      if (this.inputContent.length && !this.resultsFound.length) {
+        return 'animate-pulse';
+      }
+
+      return '';
+    }
   },
   methods: {
     findWord() {
